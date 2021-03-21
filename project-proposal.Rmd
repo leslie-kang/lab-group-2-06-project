@@ -1,0 +1,39 @@
+---
+title: "Project Proposal"
+author: "Leslie Kang, Connor Booher, Ali Sadek"
+date: "3/21/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Proposal 1: Scrabble Data
+We retrieved this data from fivethirtyeight.com under an article called "How
+‘Qi’ And ‘Za’ Changed Scrabble." The author of this article, Oliver Roeder,
+collected this data by web-scraping 1,542,642 tournament games between
+1973 and 2017 from cross-tables.com. This data set contains 19 variables, with a
+few that may be of interest.
+We may look at `winnerid` (the numerical ID of the winning player),
+`winnerscore` (score of winning player), `date`, and `lexicon` (a binary
+variable indicating whether the game was played with the North American lexicon
+or not).
+*Please note that the data set is big and we were not able to upload it into our
+`data/` folder. We have communicated this with Professor Smith.
+\
+There were two major dictionary changes that took place between 1972 and 2017.
+What we want to know: Which edition of the Official Scrabble Players Dictionary
+or OSPD had the greater influence on increasing average winning score, edition
+4 or edition 5 of OSPD?
+\
+$H_0: \mu_4 - \mu_1 = \mu_5 - \mu_2$
+\
+$H_A: \mu_4 - \mu_1 > \mu_5 - \mu_2$
+\
+Where $\mu_4$ = 3 year average winning score after 4th edition publication,
+$\mu_1$ = 3 year average winning score before 4th edition publication, $\mu_5$ =
+3 year average winning score after 5th edition publication, $\mu_2$ = 3 year
+average winning score before 5th edition publication.
+
+# Proposal 2
+
+# Proposal 3
