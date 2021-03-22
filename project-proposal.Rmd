@@ -3,11 +3,17 @@ title: "Project Proposal"
 author: "Leslie Kang, Connor Booher, Ali Sadek"
 date: "3/21/2021"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
-# Proposal 1: Scrabble Data
+# Proposal 1:
+```{r scrabble-data, message = FALSE, message = FALSE }
+library(tidyverse)
+scrabble<-read.csv("https://github.com/fivethirtyeight/data/raw/master/scrabble-games/scrabble_games.csv")
+glimpse(scrabble)
+```
+
 We retrieved this data from fivethirtyeight.com under an article called "How
 ‘Qi’ And ‘Za’ Changed Scrabble." The author of this article, Oliver Roeder,
 collected this data by web-scraping 1,542,642 tournament games between
@@ -35,6 +41,10 @@ $\mu_1$ = 3 year average winning score before 4th edition publication, $\mu_5$ =
 average winning score before 5th edition publication.
 
 # Proposal 2
+```{r movie-data, message = FALSE, message = FALSE}
+movies <- read_csv("data/movies.csv")
+glimpse(movies)
+```
 
 We retrieved these data from fivethirtyeight.com under an article called
 "The Dollar-And-Cents Case Against Hollywood’s Exclusion of Women." The data
@@ -60,6 +70,10 @@ that passes the Bechdel test and $p_m$ is the proportion of movies with a male
 director and writer that passes the Bechdel test. 
 
 # Proposal 3
+```{r brazil-data, message = FALSE, message = FALSE}
+brazil <- read_csv("data/BRASILIA_11.csv")
+glimpse(brazil)
+```
 We retrieved this data from who.int under the Global Youth Tobacco Survey. The
 authors of this dataset collected the data through written surveys handed out in
 schools throughout Brazil. The survey contains dozens of questions about the
