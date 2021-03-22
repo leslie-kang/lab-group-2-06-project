@@ -46,7 +46,7 @@ after the famous cartoonist Allison Bechdel according the following criteria:
 
 This 'test' was created to determine whether a movie's female characters were
 permitted any depth--something, for myriad reasons, that's still unlikely. 
-The IMDb datasetmwill be used to look at the relationship between a movie's 
+The IMDb dataset will be used to look at the relationship between a movie's 
 gender for `director` and `writer`. We hypothesize that the presence of a 
 female writer and/or director increases the likelihood that a given film passes 
 the Bechdel test.
@@ -60,3 +60,32 @@ that passes the Bechdel test and $p_m$ is the proportion of movies with a male
 director and writer that passes the Bechdel test. 
 
 # Proposal 3
+We retrieved this data from who.int under the Global School-Based Student Health
+Survey (GSHS). The authors of this dataset collected the data through written
+surveys handed out in schools throughout Egypt. The survey contains dozens of
+questions about the lifestyle of these students such as what they eat, their
+history of substance use, their hygiene practices and their levels of physical 
+activity. 
+
+Some variables that would be interesting to look at are `Q29` and its
+relationship to `Q32` and `Q33`. `Q29` encodes the students response to how many
+days they had smoked in the past month. `Q32` encodes the students response to
+how many times people had smoked in their presence in the past week. `Q33`
+encodes the students response to a question about their parents' history of
+tobacco use. We hypothesize that students with people smoking in their presence
+are likely to report having smoked more than students that do not have
+people smoking in their presence.
+
+$H_0: p_s = p_n$
+\
+$H_A: p_s > p_n$
+
+Where $p_s$ is the number of days smoked in the past month by students who have
+peers/parents who smoke and $p_n$ is the number of days smoked in the past month
+by students who do not encounter anyone that smokes. 
+
+```{r uploading_dat}
+www = "https://www.who.int/ncds/surveillance/gshs/EGH2011_gshs_public_use.dat"
+data <- read.delim(www, header = TRUE, sep=" ") 
+```
+
