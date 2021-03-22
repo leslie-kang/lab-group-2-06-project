@@ -72,8 +72,8 @@ relationship to `Q32` and `Q33`. `Q29` encodes the students response to how many
 days they had smoked in the past month. `Q32` encodes the students response to
 how many times people had smoked in their presence in the past week. `Q33`
 encodes the students response to a question about their parents' history of
-tobacco use. We hypothesize that students with people smoking in their presence
-are likely to report having smoked more than students that do not have
+tobacco use. We hypothesize that students with people/parents smoking in their
+presence are likely to report having smoked more than students that do not have
 people smoking in their presence.
 
 $H_0: p_s = p_n$
