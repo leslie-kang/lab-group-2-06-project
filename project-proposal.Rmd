@@ -60,32 +60,33 @@ that passes the Bechdel test and $p_m$ is the proportion of movies with a male
 director and writer that passes the Bechdel test. 
 
 # Proposal 3
-We retrieved this data from who.int under the Global School-Based Student Health
-Survey (GSHS). The authors of this dataset collected the data through written
-surveys handed out in schools throughout Egypt. The survey contains dozens of
-questions about the lifestyle of these students such as what they eat, their
-history of substance use, their hygiene practices and their levels of physical 
-activity. 
+We retrieved this data from who.int under the Global Youth Tobacco Survey. The
+authors of this dataset collected the data through written surveys handed out in
+schools throughout Brazil. The survey contains dozens of questions about the
+history of tobacco use for these students, such as the amount of times they have
+smoked, how many of their peers smoke, etc...
 
-Some variables that would be interesting to look at are `Q29` and its
-relationship to `Q32` and `Q33`. `Q29` encodes the students response to how many
-days they had smoked in the past month. `Q32` encodes the students response to
-how many times people had smoked in their presence in the past week. `Q33`
-encodes the students response to a question about their parents' history of
-tobacco use. We hypothesize that students with people/parents smoking in their
-presence are likely to report having smoked more than students that do not have
-people smoking in their presence.
+Some variables that would be interesting to look at are `CR3` and its
+relationship to `CR26` and `BRR22`. `CR3` encodes the students response to how
+many days they had smoked in the past month. `Q32` encodes the students response
+to how many of their close friends smoke cigarettes. `Q33` encodes the students
+response to a question about their parents' history of tobacco use. We
+hypothesize that students with close friends/parents who smoke are likely to
+report having smoked more than students that do not have close friends/parents 
+who smoke.
 
 $H_0: p_s = p_n$
 \
 $H_A: p_s > p_n$
 
 Where $p_s$ is the number of days smoked in the past month by students who have
-peers/parents who smoke and $p_n$ is the number of days smoked in the past month
-by students who do not encounter anyone that smokes. 
+close friends and/or parents who smoke and $p_n$ is the number of days smoked in
+the past month by students who do not have close friends and/or parents who 
+smoke. 
 
 ```{r uploading_dat}
-www = "https://www.who.int/ncds/surveillance/gshs/EGH2011_gshs_public_use.dat"
-data <- read.delim(www, header = TRUE, sep=" ") 
+library(tidyverse)
+library(infer)
+data <- read.csv("data/BRASILIA_11.csv")
 ```
 
