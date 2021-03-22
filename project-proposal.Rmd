@@ -84,9 +84,4 @@ close friends and/or parents who smoke and $p_n$ is the number of days smoked in
 the past month by students who do not have close friends and/or parents who 
 smoke. 
 
-```{r uploading_dat}
-library(tidyverse)
-library(infer)
-data <- read.csv("data/BRASILIA_11.csv")
-```
 
