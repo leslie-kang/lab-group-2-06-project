@@ -3,8 +3,8 @@ title: "Project Proposal"
 author: "Leslie Kang, Connor Booher, Ali Sadek"
 date: "3/21/2021"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # Proposal 1: Scrabble Data
@@ -35,5 +35,28 @@ $\mu_1$ = 3 year average winning score before 4th edition publication, $\mu_5$ =
 average winning score before 5th edition publication.
 
 # Proposal 2
+
+We retrieved these data from fivethirtyeight.com under an article called
+"The Dollar-And-Cents Case Against Hollywood’s Exclusion of Women." The data
+includes one csv file pulled from an API on the Bechdel Test website and another
+file with various movie statistics pulled from IMDb. The former is a score named 
+after the famous cartoonist Allison Bechdel according the following criteria:
+`0` = unscored, `1.` It has to have at least two [named] women in it, 
+`2.` Who talk to each other, `3.` About something besides a man. 
+
+This 'test' was created to determine whether a movie's female characters were
+permitted any depth--something, for myriad reasons, that's still unlikely. 
+The IMDb datasetmwill be used to look at the relationship between a movie's 
+gender for `director` and `writer`. We hypothesize that the presence of a 
+female writer and/or director increases the likelihood that a given film passes 
+the Bechdel test.
+
+$H_0: p_f = p_m$
+\
+$H_A: p_f > p_m$
+
+Where $p_f$ is the proportion of movies with a female director and/or writer
+that passes the Bechdel test and $p_m$ is the proportion of movies with a male 
+director and writer that passes the Bechdel test. 
 
 # Proposal 3
